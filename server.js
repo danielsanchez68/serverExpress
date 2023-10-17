@@ -1,8 +1,3 @@
-//https://www.npmjs.com/package/express?activeTab=readme
-//https://github.com/expressjs/express
-//http://expressjs.com/
-//http://expressjs.com/en/4x/api.html
-
 const express = require('express')
 
 let contadorVisitas = 0
@@ -89,7 +84,7 @@ app.delete('*', controladorDefault)
 
 
 
-const PORT = 8080
+const PORT = process.env.PORT || 8080
 const server = app.listen(PORT, () => console.log(`Servidor express escuchando en http://localhost:${PORT}`))
 server.on('error', error => console.log(`Error en servidor express: ${error.message}`))
 
